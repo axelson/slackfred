@@ -18,15 +18,6 @@ def searchSlackFiles(files):
 
 def main(wf):
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--setkey', dest='apikey', nargs='?', default = None)
-    parser.add_argument('query', nargs='?', default = None)
-    args = parser.parse_args(wf.args)
-
-    if args.apikey:
-        wf.save_password('slack_api_key', args.apikey)
-        return 0
-
     try:
         api_key = wf.get_password('slack_api_key')
     except PasswordNotFound:
@@ -44,7 +35,7 @@ def main(wf):
     def wrapper():
         return slackFiles(api_key)
 
-    filesList = wf.cached_data('names', wrapper, max_age = 120)
+    filesList = wf.cached_data('files', wrapper, max_age = 120)
 
     if query:
         filesList = wf.filter(query, filesList, key = searchSlackFiles)

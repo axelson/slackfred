@@ -6,6 +6,25 @@
 	<string>fspinillo.alfredv2.slackfred</string>
 	<key>connections</key>
 	<dict>
+		<key>3FE2A525-A5B9-4B48-8331-36BE53683DA6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BEC5CD00-6875-4BDD-80D1-BE629A87A009</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Leave channel</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B764C047-C0BC-4155-A566-8DF25D007719</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Join channel</string>
+			</dict>
+		</array>
 		<key>71B0FE9F-18BA-4F40-A9F4-5E10352018EF</key>
 		<array>
 			<dict>
@@ -21,6 +40,14 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>FA372163-CD56-4D63-9EDA-5EF85BE0A801</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Get your Slack token</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>71B0FE9F-18BA-4F40-A9F4-5E10352018EF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -28,11 +55,11 @@
 				<string></string>
 			</dict>
 		</array>
-		<key>8D89441C-3C28-4F4A-B03F-E8714576A98F</key>
+		<key>A8C91CC1-9B07-4FB3-AD94-76A318F2C58A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FA372163-CD56-4D63-9EDA-5EF85BE0A801</string>
+				<string>F4DB3A35-7840-420E-8366-4F0A964C07AE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -123,25 +150,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>slt</string>
-				<key>text</key>
-				<string>Get your Slack API key</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8D89441C-3C28-4F4A-B03F-E8714576A98F</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>plusspaces</key>
 				<false/>
 				<key>url</key>
@@ -153,6 +161,27 @@ end alfred_script</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>FA372163-CD56-4D63-9EDA-5EF85BE0A801</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>slt</string>
+				<key>subtext</key>
+				<string>Hold cmd to get your API key</string>
+				<key>text</key>
+				<string>Set your Slack API key</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>747D10EA-4F5E-467E-9234-F41DFDC751B8</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -200,42 +229,6 @@ end alfred_script</string>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>slt</string>
-				<key>text</key>
-				<string>Set your Slack API key</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>747D10EA-4F5E-467E-9234-F41DFDC751B8</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>plusspaces</key>
-				<false/>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4FB0F0AC-11BF-4D83-AD36-A622E0A70FAC</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
@@ -259,11 +252,132 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4FB0F0AC-11BF-4D83-AD36-A622E0A70FAC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python slackfred-channels-leave.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BEC5CD00-6875-4BDD-80D1-BE629A87A009</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>slc</string>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>python slackfred-channels.py "{query}"</string>
+				<key>title</key>
+				<string>Search channels in Slack</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3FE2A525-A5B9-4B48-8331-36BE53683DA6</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python slackfred-channels-join.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B764C047-C0BC-4155-A566-8DF25D007719</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python slackfred-presence.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F4DB3A35-7840-420E-8366-4F0A964C07AE</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>slp</string>
+				<key>subtext</key>
+				<string>'active' or 'away'</string>
+				<key>text</key>
+				<string>Set your presence</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A8C91CC1-9B07-4FB3-AD94-76A318F2C58A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>3FE2A525-A5B9-4B48-8331-36BE53683DA6</key>
+		<dict>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
 		<key>47C612F5-1912-4807-AE52-40BEEDFBA91C</key>
 		<dict>
 			<key>ypos</key>
@@ -287,12 +401,22 @@ end alfred_script</string>
 		<key>747D10EA-4F5E-467E-9234-F41DFDC751B8</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>190</real>
 		</dict>
-		<key>8D89441C-3C28-4F4A-B03F-E8714576A98F</key>
+		<key>A8C91CC1-9B07-4FB3-AD94-76A318F2C58A</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>740</real>
+		</dict>
+		<key>B764C047-C0BC-4155-A566-8DF25D007719</key>
+		<dict>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>BEC5CD00-6875-4BDD-80D1-BE629A87A009</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
 		</dict>
 		<key>C3904C9D-34AB-4FBF-94D1-B2A318E35AED</key>
 		<dict>
@@ -304,10 +428,15 @@ end alfred_script</string>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>F4DB3A35-7840-420E-8366-4F0A964C07AE</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
 		<key>FA372163-CD56-4D63-9EDA-5EF85BE0A801</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>120</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
