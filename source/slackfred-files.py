@@ -19,7 +19,6 @@ def searchSlackFiles(files):
 def main(wf):
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--download', dest='download', nargs='?', default = None)
     parser.add_argument('query', nargs = '?', default = None)
     args = parser.parse_args(wf.args)
 
