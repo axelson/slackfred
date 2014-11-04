@@ -10,19 +10,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BEC5CD00-6875-4BDD-80D1-BE629A87A009</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>Leave channel</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>B764C047-C0BC-4155-A566-8DF25D007719</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>Join channel</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>68270634-01E5-4AE3-970D-1799E1FEFB61</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Leave channel</string>
 			</dict>
 		</array>
 		<key>71B0FE9F-18BA-4F40-A9F4-5E10352018EF</key>
@@ -275,14 +275,14 @@ end alfred_script</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python slackfred-channels-leave.py "{query}"</string>
+				<string>python slackfred-channels-join.py "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>BEC5CD00-6875-4BDD-80D1-BE629A87A009</string>
+			<string>B764C047-C0BC-4155-A566-8DF25D007719</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -319,14 +319,14 @@ end alfred_script</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python slackfred-channels-join.py "{query}"</string>
+				<string>python slackfred-channels-leave.py "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B764C047-C0BC-4155-A566-8DF25D007719</string>
+			<string>68270634-01E5-4AE3-970D-1799E1FEFB61</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -376,7 +376,7 @@ end alfred_script</string>
 		<key>3FE2A525-A5B9-4B48-8331-36BE53683DA6</key>
 		<dict>
 			<key>ypos</key>
-			<real>560</real>
+			<real>580</real>
 		</dict>
 		<key>47C612F5-1912-4807-AE52-40BEEDFBA91C</key>
 		<dict>
@@ -386,7 +386,12 @@ end alfred_script</string>
 		<key>4FB0F0AC-11BF-4D83-AD36-A622E0A70FAC</key>
 		<dict>
 			<key>ypos</key>
-			<real>370</real>
+			<real>410</real>
+		</dict>
+		<key>68270634-01E5-4AE3-970D-1799E1FEFB61</key>
+		<dict>
+			<key>ypos</key>
+			<real>640</real>
 		</dict>
 		<key>71B0FE9F-18BA-4F40-A9F4-5E10352018EF</key>
 		<dict>
@@ -411,17 +416,12 @@ end alfred_script</string>
 		<key>B764C047-C0BC-4155-A566-8DF25D007719</key>
 		<dict>
 			<key>ypos</key>
-			<real>610</real>
-		</dict>
-		<key>BEC5CD00-6875-4BDD-80D1-BE629A87A009</key>
-		<dict>
-			<key>ypos</key>
-			<real>490</real>
+			<real>540</real>
 		</dict>
 		<key>C3904C9D-34AB-4FBF-94D1-B2A318E35AED</key>
 		<dict>
 			<key>ypos</key>
-			<real>370</real>
+			<real>410</real>
 		</dict>
 		<key>EC4EDF6A-CCBD-4AAF-B00B-750222ABCBB5</key>
 		<dict>

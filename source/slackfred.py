@@ -8,10 +8,10 @@ def slackList(api_key):
 
     slackSearch = []
     for channels in slackChannels['channels']:
-        slackSearch.append(channels['name'])
+        slackSearch.append('#' + channels['name'])
 
     for users in slackUsers['members']:
-        slackSearch.append(users['name'])
+        slackSearch.append('@' + users['name'])
 
     return slackSearch
 
@@ -48,7 +48,7 @@ def main(wf):
     def wrapper():
         return slackList(api_key)
 
-    slackSearch = wf.cached_data('names', wrapper, max_age = 120)
+    slackSearch = wf.cached_data('channels', wrapper, max_age = 120)
 
     if query:
         slackSearch = wf.filter(query, slackSearch, key = searchSlackNames)

@@ -16,10 +16,6 @@ def searchSlackChannels(channels):
 
 def main(wf):
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('query', nargs='?', default = None)
-    args = parser.parse_args(wf.args)
-
     try:
         api_key = wf.get_password('slack_api_key')
     except PasswordNotFound:
@@ -29,15 +25,15 @@ def main(wf):
         wf.send_feedback()
         return 0
 
-    if len(wf.args):
-        query = wf.args[0]
-    else:
-        query = None
-
     def wrapper():
         return slackChannels(api_key)
 
     channelsList = wf.cached_data('channels', wrapper, max_age = 180)
+
+    if len(wf.args):
+        query = wf.args[0]
+    else:
+        query = None
 
     if query:
         channelsList = wf.filter(query, channelsList, key = searchSlackChannels)

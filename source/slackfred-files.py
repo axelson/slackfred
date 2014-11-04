@@ -18,6 +18,11 @@ def searchSlackFiles(files):
 
 def main(wf):
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--download', dest='download', nargs='?', default = None)
+    parser.add_argument('query', nargs = '?', default = None)
+    args = parser.parse_args(wf.args)
+
     try:
         api_key = wf.get_password('slack_api_key')
     except PasswordNotFound:
@@ -27,10 +32,7 @@ def main(wf):
         wf.send_feedback()
         return 0
 
-    if len(wf.args):
-        query = wf.args[0]
-    else:
-        query = None
+    query = args.query
 
     def wrapper():
         return slackFiles(api_key)
@@ -41,9 +43,15 @@ def main(wf):
         filesList = wf.filter(query, filesList, key = searchSlackFiles)
 
     for files in filesList:
-        wf.add_item(title = files['name'],
-            arg = files['url'],
-            valid = True)
+        if files['comments_count'] > 0:
+            wf.add_item(title = files['name'],
+                subtitle = files['initial_comment']['comment'],
+                arg = files['url'],
+                valid = True)
+        else:
+            wf.add_item(title = files['name'],
+                arg = files['url'],
+                valid = True)
 
     wf.send_feedback()
 
