@@ -13,7 +13,6 @@ Currently available:
 * View, leave and join channels: 'slc' displays a searchable list. Selecting a channel with 'alt' leaves and 'ctrl' lets you join.
 
 To-do:
-* Downloading a file instead of viewing
 * Search messages
 * Create a smoother API key/token process
 
