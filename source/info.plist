@@ -25,6 +25,8 @@
 				<string>Leave channel</string>
 			</dict>
 		</array>
+		<key>68270634-01E5-4AE3-970D-1799E1FEFB61</key>
+		<array/>
 		<key>71B0FE9F-18BA-4F40-A9F4-5E10352018EF</key>
 		<array>
 			<dict>
@@ -275,7 +277,7 @@ end alfred_script</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python slackfred-channels-join.py "{query}"</string>
+				<string>python slackfred-channels.py --join "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -319,7 +321,7 @@ end alfred_script</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python slackfred-channels-leave.py "{query}"</string>
+				<string>python slackfred-channels.py --leave "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
