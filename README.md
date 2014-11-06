@@ -13,7 +13,7 @@ Currently available:
 * View, leave and join channels: 'slc' displays a searchable list. Selecting a channel with 'alt' leaves and 'ctrl' lets you join.
 
 To-do:
-* Search messages
+* Search direct messages
 * Create a smoother API key/token process
 
 This workflow was created with the help of [Dean Jackson's](https://github.com/deanishe/alfred-workflow) library.
