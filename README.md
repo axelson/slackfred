@@ -13,10 +13,8 @@ Currently available:
 * View, leave and join channels: 'slc' displays a searchable list. Selecting a channel with 'alt' leaves and 'ctrl' lets you join.
 
 To-do:
-* Display initial_comment when searching files
 * Downloading a file instead of viewing
 * Search messages
-* Consolidate files with argparse
 * Create a smoother API key/token process
 
 This workflow was created with the help of [Dean Jackson's](https://github.com/deanishe/alfred-workflow) library.
