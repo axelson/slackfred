@@ -11,6 +11,7 @@ Currently available:
 * Search users and rooms: 'slk' displays list of search user and room names. Hitting enter triggers an Applescript to interact with the **desktop** application and passes the selected name. Similar to cmd+k
 * Set your presence: 'slp' with 'active' or 'away'
 * View, leave and join channels: 'slc' displays a searchable list. Selecting a channel with 'alt' leaves and 'ctrl' lets you join.
+* Clear messages: 'slclear'
 
 To-do:
 * Search direct messages
